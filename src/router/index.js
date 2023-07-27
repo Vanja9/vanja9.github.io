@@ -6,16 +6,25 @@ const routes = [
   {
     path: '/',
     name: 'home',
+    meta: {
+      title: 'Home'
+    },
     component: HomeView
   },
   {
     path: '/about',
     name: 'about',
+    meta: {
+      title: 'About'
+    },
     component: AboutView
   },
   {
     path: '/flight/:id',
     name: 'flight',
+    meta: {
+      title: 'Flight'
+    },
     params: true,
     component: FlightView
   },
@@ -24,6 +33,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title)
+      document.title = `${to.meta.title}  :: AirSerbia`;
+  next();
 })
 
 export default router

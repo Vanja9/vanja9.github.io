@@ -1,8 +1,9 @@
 <template>
-  <div class="container mt-4 text-light">
+  <div class=" text-light container mt-4" >
+
     <h2>Prikaz letova</h2>
     <div v-if="letovi">
-      <nav aria-label="...">
+      <nav>
         <ul class="pagination">
           <li class="page-item ">
             <button class="page-link bg-dark text-white" type="button" @click="(e)=> loadFirst()">Prva</button>
@@ -23,7 +24,7 @@
       </nav>
 
 
-      <div class=" container mt-4">
+      <div>
         <table class="table table-striped table-dark">
           <thead>
             <tr>
@@ -94,3 +95,10 @@ function loadNext() {
   loadData(letovi.value.totalPages - 1)
   }
 </script>
+
+
+
+
+
+
+
