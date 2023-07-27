@@ -52,7 +52,10 @@
         </table>
       </div>
     </div>
-    <div class="text-light" v-else>Ucitavanjee</div>
+    <div class="ucitavanje" v-else>
+            <img src="@/assets/loading.gif" width="80">
+            <h1>UCITAVANJE....</h1>
+        </div>
   </div>
 </template>
 
@@ -95,6 +98,13 @@ function loadNext() {
   loadData(letovi.value.totalPages - 1)
   }
 </script>
+
+
+<style>
+.ucitavanje{
+  text-align: center;
+}
+</style>
 
 
 
