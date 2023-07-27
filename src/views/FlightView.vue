@@ -47,7 +47,7 @@
         </div>
 
 
-        <div class="" v-else>
+        <div class="ucitavanje" v-else>
             <img src="@/assets/loading.gif" width="80">
             <h1>UCITAVANJE....</h1>
         </div>
@@ -147,5 +147,10 @@ function toCelsious(k) {
 .container-sve{
     display:flex;
     flex-direction: column;
+}
+
+
+.ucitavanje{
+    text-align: center;
 }
 </style>

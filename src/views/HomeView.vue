@@ -81,17 +81,17 @@ function loadFirst() {
 }
 
 function loadNext() {
-  if(letovi.last) return
+  if(letovi.value.last) return
   loadData(letovi.value.number + 1)
   }
 
   function loadPrevous() {
-  if(letovi.first) return
+  if(letovi.value.first) return
   loadData(letovi.value.number - 1)
   }
 
   function loadLast() {
-  if(letovi.last) return
+  if(letovi.value.last) return
   loadData(letovi.value.totalPages - 1)
   }
 </script>
