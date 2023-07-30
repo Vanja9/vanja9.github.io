@@ -52,16 +52,14 @@
         </table>
       </div>
     </div>
-    <div class="ucitavanje" v-else>
-            <img src="@/assets/loading.gif" width="80">
-            <h1>UCITAVANJE....</h1>
-        </div>
+    <LoadingWidget v-else />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import FlightServices from '@/services/flight.services'
+import LoadingWidget from '@/components/LoadingWidget.vue'
 
 const letovi = ref()
 
