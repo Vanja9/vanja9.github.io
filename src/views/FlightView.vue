@@ -47,10 +47,7 @@
         </div>
 
 
-        <div class="ucitavanje" v-else>
-            <img src="@/assets/loading.gif" width="80">
-            <h1>UCITAVANJE....</h1>
-        </div>
+        <LoadingWidget v-else />
     </div>
 </template>
 
@@ -60,6 +57,7 @@ import { useRoute } from 'vue-router';
 import { ref } from 'vue'
 import FlightServices from '@/services/flight.services'
 import WeatherService from '@/services/weather.service'
+import LoadingWidget from '@/components/LoadingWidget.vue'
 
 
 const route = useRoute();
